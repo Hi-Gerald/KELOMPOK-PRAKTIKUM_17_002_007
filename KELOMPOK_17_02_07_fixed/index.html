@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kopi Santai - Home</title>
+  <!-- Tailwind CDN (utilities for Flexbox/Grid as required) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="grid-container-lines" role="navigation" aria-label="Main navigation">
+      <img src="images/logo.jpg" alt="Kopi Santai logo" class="logo" width="80">
+      <a class="nav1" href="index.html">Home</a>
+      <a class="nav2" href="menu.html">Menu</a>
+      <a class="nav3" href="about.html">About</a>
+      <a class="nav4" href="reservation.html">Reservation</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="title" class="hero" style="background-image:url('images/tagphoto.jpg')">
+      <h2>Selamat Datang di Kopi Santai</h2>
+      <h3>Tempat Terbaik untuk Bersantai dengan Secangkir Kopi</h3>
+      <div class="cta-buttons">
+        <button class="btn-primary"><a href="menu.html">Lihat Menu</a></button>
+        <button class="btn-secondary"><a href="reservation.html">Reservasi Sekarang</a></button>
+      </div>
+    </section>
+
+    <section id="featured-menu">
+      <h2>Menu Favorit Kami</h2>
+      <div class="menu-grid">
+        <!-- Four featured items -->
+        <article class="menu-card">
+          <img src="images/espresso.jpg" alt="Espresso">
+          <h3>Espresso</h3>
+          <p class="price">Rp 18.000</p>
+          <p>Intens dan pekat, citra rasa asli biji kopi.</p>
+        </article>
+        <article class="menu-card">
+          <img src="images/cappuccino.jpg" alt="Cappuccino">
+          <h3>Cappuccino</h3>
+          <p class="price">Rp 30.000</p>
+          <p>Perpaduan espresso, susu, dan busa lembut.</p>
+        </article>
+        <article class="menu-card">
+          <img src="images/latte.jpg" alt="Latte">
+          <h3>Latte</h3>
+          <p class="price">Rp 32.000</p>
+          <p>Rasa lembut dan creamy dengan latte art.</p>
+        </article>
+        <article class="menu-card">
+          <img src="images/chococake.jpg" alt="Chocolate">
+          <h3>Chocolate</h3>
+          <p class="price">Rp 25.000</p>
+          <p>Minuman cokelat hangat, cocok untuk non-coffee lovers.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="why-choose-us">
+      <h2>Mengapa Memilih Kami?</h2>
+      <div class="why-grid">
+        <article>
+          <img src="images/icon-coffee.jpg" alt="Biji Kopi Premium">
+          <h3>Biji Kopi Premium</h3>
+          <p>Kami menggunakan biji kopi pilihan dari perkebunan terbaik.</p>
+        </article>
+        <article>
+          <img src="images/icon-couch.jpg" alt="Suasana Nyaman">
+          <h3>Suasana Nyaman</h3>
+          <p>Interior cozy, cocok untuk bekerja atau bersantai.</p>
+        </article>
+        <article>
+          <img src="images/icon-wifi.jpg" alt="WiFi Gratis">
+          <h3>Wifi Gratis</h3>
+          <p>Koneksi stabil untuk mendukung aktivitas pengunjung.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <address>
+      Kopi Santai &bull; Jl. Contoh No.123, Jakarta<br>
+      Tel: 0812-3456-7890 &bull; Email: info@kopisantai.com
+    </address>
+    <div class="hours">
+      <p>Jam Operasional: Senin - Minggu, 08:00 - 22:00</p>
+    </div>
+    <div class="socials">
+      <a href="#" aria-label="Instagram">Instagram</a> |
+      <a href="#" aria-label="Facebook">Facebook</a> |
+      <a href="#" aria-label="WhatsApp">WhatsApp</a>
+    </div>
+    <p>&copy; 2025 Kopi Santai</p>
+  </footer>
+
+</body>
+</html>

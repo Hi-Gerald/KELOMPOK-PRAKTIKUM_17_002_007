@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Menu - Kopi Santai</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="grid-container-lines" role="navigation">
+      <img src="images/logo.jpg" alt="logo" width="80" class="logo">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="reservation.html">Reservation</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="menu-filter">
+      <h2>Daftar Menu Lengkap</h2>
+      <nav aria-label="Filter menu">
+        <button data-filter="all">All</button>
+        <button data-filter="coffee">Coffee</button>
+        <button data-filter="noncoffee">Non-Coffee</button>
+        <button data-filter="food">Food</button>
+        <button data-filter="snacks">Snacks</button>
+      </nav>
+    </section>
+
+    <section class="menu-grid" id="menuGrid">
+      <!-- We'll provide 12 items minimum -->
+      <article class="menu-card" data-category="coffee">
+        <figure><img src="images/espresso.jpg" alt="Espresso"><figcaption>Espresso</figcaption></figure>
+        <h3>Espresso</h3>
+        <p>Strong and classic shot.</p>
+        <p class="price">Rp 18.000</p>
+      </article>
+      <article class="menu-card" data-category="coffee">
+        <figure><img src="images/cappuccino.jpg" alt="Cappuccino"><figcaption>Cappuccino</figcaption></figure>
+        <h3>Cappuccino</h3>
+        <p>Espresso, steamed milk, milk foam.</p>
+        <p class="price">Rp 30.000</p>
+        <span class="badge">Best Seller</span>
+      </article>
+      <article class="menu-card" data-category="coffee">
+        <figure><img src="images/latte.jpg" alt="Latte"><figcaption>Latte</figcaption></figure>
+        <h3>Latte</h3>
+        <p>Smooth and creamy latte.</p>
+        <p class="price">Rp 32.000</p>
+      </article>
+      <article class="menu-card" data-category="noncoffee">
+        <figure><img src="images/chococake.jpg" alt="Chocolate"><figcaption>Chocolate</figcaption></figure>
+        <h3>Chocolate</h3>
+        <p>Rich hot chocolate.</p>
+        <p class="price">Rp 25.000</p>
+        <span class="badge">New</span>
+      </article>
+
+      <!-- Add placeholders for other items -->
+      <article class="menu-card" data-category="food">
+        <h3>Sandwich</h3><p>Grilled sandwich with veggies.</p><p class="price">Rp 40.000</p>
+      </article>
+      <article class="menu-card" data-category="food">
+        <h3>Pasta</h3><p>Classic pasta.</p><p class="price">Rp 45.000</p>
+      </article>
+      <article class="menu-card" data-category="food">
+        <h3>Salad</h3><p>Fresh garden salad.</p><p class="price">Rp 35.000</p>
+      </article>
+      <article class="menu-card" data-category="snacks">
+        <h3>Cookies</h3><p>Homemade cookies.</p><p class="price">Rp 15.000</p>
+      </article>
+      <article class="menu-card" data-category="snacks">
+        <h3>Pastry</h3><p>Buttery pastry.</p><p class="price">Rp 20.000</p>
+      </article>
+      <article class="menu-card" data-category="noncoffee">
+        <h3>Matcha</h3><p>Japanese matcha latte.</p><p class="price">Rp 28.000</p>
+      </article>
+      <article class="menu-card" data-category="noncoffee">
+        <h3>Tea</h3><p>Selection of teas.</p><p class="price">Rp 12.000</p>
+      </article>
+      <article class="menu-card" data-category="coffee">
+        <h3>Americano</h3><p>Espresso + hot water.</p><p class="price">Rp 20.000</p>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    // Menu filter JS
+    document.addEventListener('DOMContentLoaded', function(){
+      const buttons = document.querySelectorAll('[data-filter]');
+      const items = document.querySelectorAll('#menuGrid .menu-card');
+      buttons.forEach(b => {
+        b.addEventListener('click', () => {
+          const f = b.getAttribute('data-filter');
+          items.forEach(it => {
+            if(f==='all' || it.getAttribute('data-category')===f){
+              it.style.display = '';
+            } else {
+              it.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

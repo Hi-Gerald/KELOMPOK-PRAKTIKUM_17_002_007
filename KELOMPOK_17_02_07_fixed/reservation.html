@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Reservation - Kopi Santai</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="grid-container-lines">
+      <img src="images/logo.jpg" alt="logo" width="80" class="logo">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="reservation.html">Reservation</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Reservasi Meja</h2>
+      <p>Isi formulir berikut untuk melakukan reservasi. Pastikan data yang dimasukkan benar.</p>
+      <form id="reservationForm" action="#" novalidate>
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="name">Nama Lengkap</label>
+          <input id="name" name="name" type="text" placeholder="Nama lengkap" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="email@contoh.com" required>
+
+          <label for="tel">No. Telepon</label>
+          <input id="tel" name="tel" type="tel" placeholder="0812xxxx" pattern="\d{9,15}" required>
+        </fieldset>
+
+        <fieldset>
+          <legend>Reservation Details</legend>
+          <label for="date">Tanggal</label>
+          <input id="date" name="date" type="date" required>
+
+          <label for="time">Waktu</label>
+          <input id="time" name="time" type="time" required>
+
+          <label for="people">Jumlah Orang</label>
+          <select id="people" name="people" required>
+            <option value="">Pilih...</option>
+            <option value="1">1 orang</option>
+<option value="2">2 orang</option>
+<option value="3">3 orang</option>
+<option value="4">4 orang</option>
+<option value="5">5 orang</option>
+<option value="6">6 orang</option>
+<option value="7">7 orang</option>
+<option value="8">8 orang</option>
+<option value="9">9 orang</option>
+<option value="10">10 orang</option>
+          </select>
+
+          <label for="tableType">Tipe Meja</label>
+          <select id="tableType" name="tableType" required>
+            <option value="">Pilih...</option>
+            <option>Regular</option>
+            <option>Window Seat</option>
+            <option>Private Room</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Additional</legend>
+          <label for="notes">Catatan Khusus</label>
+          <textarea id="notes" name="notes" placeholder="Permintaan khusus (opsional)"></textarea>
+
+          <label><input type="checkbox" id="agree" name="agree" required> Saya setuju dengan syarat dan ketentuan</label>
+        </fieldset>
+
+        <button type="submit">Kirim Reservasi</button>
+      </form>
+
+      <aside>
+        <h3>Alternatif Kontak</h3>
+        <p>Reservasi via WhatsApp: 0812-3456-7890</p>
+      </aside>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('reservationForm').addEventListener('submit', function(e){
+      if(!this.checkValidity()){
+        e.preventDefault();
+        alert('Lengkapi semua field yang wajib diisi dengan benar.');
+      } else {
+        e.preventDefault();
+        alert('Reservasi terkirim! (Demo - tidak menyimpan data).');
+        this.reset();
+      }
+    });
+  </script>
+</body>
+</html>
