@@ -7,3 +7,7 @@
 @media (min-width: 1024px) {
   .menu-grid { grid-template-columns: repeat(4,1fr); }
 }
+
+:root {
+  --primary-color: #8B5E34; /* warna utama untuk tombol, menu, dll */
+}
